@@ -24,4 +24,12 @@ public class TemperatureSensor {
 
     private LocalDate timestamp;
 
+    @Override
+    public String toString() {
+        return "TemperatureSensor{" +
+                "id=" + id +
+                ", temperature=" + temperature +
+                ", timestamp=" + timestamp +
+                '}';
+    }
 }
