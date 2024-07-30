@@ -11,14 +11,12 @@ public class TemperatureMapper {
 
         entity.setTemperature(dto.getTemperature());
         entity.setTimestamp(dto.getTimestamp());
-        entity.setId(dto.getId());
 
         return entity;
     }
 
     public static TemperatureSensorDto mapToDto(TemperatureSensorDto dto, TemperatureSensor entity){
 
-        dto.setId(entity.getId());
         dto.setTemperature(entity.getTemperature());
         dto.setTimestamp(entity.getTimestamp());
 
