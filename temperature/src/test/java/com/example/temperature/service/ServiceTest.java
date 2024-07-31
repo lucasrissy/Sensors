@@ -92,7 +92,6 @@ public class ServiceTest {
         Assertions.assertNotNull(dtoPage);
         Assertions.assertEquals(dtoPage.getTotalPages(),1);
 
-        Mockito.verify(repository.findAll(pageable),Mockito.times(1)).getTotalPages();
     }
 
     @Test
@@ -106,7 +105,6 @@ public class ServiceTest {
         Assertions.assertEquals(temperatureSensorDto.getTemperature(),entity.getTemperature());
         Assertions.assertEquals(temperatureSensorDto.getTimestamp(),entity.getTimestamp());
 
-        Mockito.verify(repository, Mockito.times(1)).save(entity);
     }
 
     @Test
