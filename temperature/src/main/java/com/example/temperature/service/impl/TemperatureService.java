@@ -60,7 +60,7 @@ public class TemperatureService implements TemperatureServiceInterface {
                 isUpdate = true;
 
             }catch (Exception e){
-                throw new ResourceNotFound("Resource not found","ds","sds");
+                throw new ResourceNotFound("Resource not found","id",id.toString());
             }
         }
        return isUpdate;

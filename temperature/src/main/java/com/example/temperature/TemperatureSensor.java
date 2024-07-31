@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // Swagger : http://localhost:8080/swagger-ui/index.html
 @OpenAPIDefinition(
 		info = @Info(
-				title = "Temperature microservice REST API Documentation",
+				title = "Temperature Microservice REST API Documentation",
 				description = "Temperature sensor microservice REST API Documentation",
 				version = "v1",
 				contact = @Contact(
