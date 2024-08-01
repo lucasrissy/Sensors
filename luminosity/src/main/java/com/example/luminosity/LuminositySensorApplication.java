@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TemperaturesensorApplication {
+public class LuminositySensorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TemperaturesensorApplication.class, args);
+		SpringApplication.run(LuminositySensorApplication.class, args);
 	}
 
 }

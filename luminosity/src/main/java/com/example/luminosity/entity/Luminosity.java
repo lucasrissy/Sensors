@@ -6,12 +6,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tb_name")
+@Table(name = "tb_luminosity")
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
@@ -20,7 +18,7 @@ public class Luminosity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long UID;
+    private Long id;
 
     private Integer luminosity;
 

@@ -1,0 +1,10 @@
+INSERT INTO tb_luminosity (luminosity, timestamp) VALUES (22, '2023-07-20');
+INSERT INTO tb_luminosity (luminosity, timestamp) VALUES (23, '2023-07-21');
+INSERT INTO tb_luminosity (luminosity, timestamp) VALUES (21, '2023-07-22');
+INSERT INTO tb_luminosity (luminosity, timestamp) VALUES (24, '2023-07-23');
+INSERT INTO tb_luminosity (luminosity, timestamp) VALUES (22, '2023-07-24');
+INSERT INTO tb_luminosity (luminosity, timestamp) VALUES (25, '2023-07-25');
+INSERT INTO tb_luminosity (luminosity, timestamp) VALUES (20, '2023-07-26');
+INSERT INTO tb_luminosity (luminosity, timestamp) VALUES (26, '2023-07-27');
+INSERT INTO tb_luminosity (luminosity, timestamp) VALUES (21, '2023-07-28');
+INSERT INTO tb_luminosity (luminosity, timestamp) VALUES (23, '2023-07-29');

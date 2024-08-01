@@ -1,4 +1,4 @@
-package repository;
+package com.example.luminosity.repository;
 
 import com.example.luminosity.entity.Luminosity;
 import org.springframework.data.jpa.repository.JpaRepository;

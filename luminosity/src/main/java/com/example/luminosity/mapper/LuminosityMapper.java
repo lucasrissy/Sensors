@@ -10,7 +10,7 @@ public class LuminosityMapper {
     public static Luminosity mapToEntity (Luminosity entity, LuminosityDto dto){
 
         entity.setLuminosity(dto.getLuminosity());
-        entity.setUID(dto.getUID());
+        entity.setId(dto.getUID());
         entity.setTimestamp(dto.getTimestamp());
 
         return entity;
@@ -19,7 +19,7 @@ public class LuminosityMapper {
     public static LuminosityDto mapToDto (Luminosity entity, LuminosityDto dto){
 
         dto.setLuminosity(entity.getLuminosity());
-        dto.setUID(entity.getUID());
+        dto.setUID(entity.getId());
         dto.setTimestamp(entity.getTimestamp());
 
         return dto;
