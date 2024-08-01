@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/temperaturesensor/pom.xml" />
         <option value="$PROJECT_DIR$/luminosity/pom.xml" />
         <option value="$PROJECT_DIR$/temperature/pom.xml" />
+        <option value="$PROJECT_DIR$/eurekaserver/pom.xml" />
       </list>
     </option>
   </component>
