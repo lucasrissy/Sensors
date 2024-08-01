@@ -104,6 +104,7 @@ public class TemperatureSensorController {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.registry(dto));
     }
 
+
     @Operation(
             summary = "Update a temperature sensor record",
             description = "REST API endpoint to update a temperature sensor record with the provided details"
@@ -134,6 +135,7 @@ public class TemperatureSensorController {
                     .body(new ResponseDto(HttpStatus.EXPECTATION_FAILED,"update was not realized!"));
         }
     }
+
 
     @Operation(
             summary = "Delete temperature record REST API",

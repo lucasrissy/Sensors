@@ -1,12 +1,11 @@
 package com.example.temperature.service;
 
 import com.example.temperature.dto.TemperatureSensorDto;
-import com.example.temperature.entity.TemperatureSensor;
+import com.example.temperature.entity.Temperature;
 import com.example.temperature.exceptions.ResourceNotFound;
 import com.example.temperature.mapper.TemperatureMapper;
 import com.example.temperature.repository.TemperatureRepository;
 import com.example.temperature.service.impl.TemperatureService;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,7 +15,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -37,19 +35,19 @@ public class ServiceTest {
 
     private Long id;
 
-    private TemperatureSensor entity;
+    private Temperature entity;
 
     private TemperatureSensorDto dto;
 
-    private PageImpl<TemperatureSensor> page;
+    private PageImpl<Temperature> page;
 
     @BeforeEach
     public  void setup(){
 
         id = 1L;
 
-        entity = new TemperatureSensor();
-        entity.setId(1L);
+        entity = new Temperature();
+        entity.setUID(1L);
         entity.setTimestamp(LocalDate.now());
         entity.setTemperature(30);
 

@@ -1,20 +1,15 @@
 package com.example.temperature.service.impl;
 
 import com.example.temperature.dto.TemperatureSensorDto;
-import com.example.temperature.entity.TemperatureSensor;
+import com.example.temperature.entity.Temperature;
 import com.example.temperature.exceptions.ResourceNotFound;
 import com.example.temperature.mapper.TemperatureMapper;
 import com.example.temperature.repository.TemperatureRepository;
 import com.example.temperature.service.TemperatureServiceInterface;
 import lombok.AllArgsConstructor;
-import org.hibernate.exception.DataException;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.sql.SQLDataException;
-import java.sql.SQLException;
 
 @Service
 @AllArgsConstructor
@@ -44,7 +39,7 @@ public class TemperatureService implements TemperatureServiceInterface {
         if (sensorDto == null){
             throw new NullPointerException("this sensor is null: "+sensorDto);
         }
-        return TemperatureMapper.mapToDto(new TemperatureSensorDto(),repository.save(TemperatureMapper.mapToEntity(sensorDto,new TemperatureSensor()))) ;
+        return TemperatureMapper.mapToDto(new TemperatureSensorDto(),repository.save(TemperatureMapper.mapToEntity(sensorDto,new Temperature()))) ;
     }
 
     @Override
@@ -53,10 +48,10 @@ public class TemperatureService implements TemperatureServiceInterface {
         boolean isUpdate = false;
         if (repository.existsById(id)){
             try {
-                TemperatureSensor temperatureSensor = repository.getReferenceById(id);
-                temperatureSensor.setTemperature(dto.getTemperature());
-                temperatureSensor.setTimestamp(dto.getTimestamp());
-                repository.save(temperatureSensor);
+                Temperature temperature = repository.getReferenceById(id);
+                temperature.setTemperature(dto.getTemperature());
+                temperature.setTimestamp(dto.getTimestamp());
+                repository.save(temperature);
                 isUpdate = true;
 
             }catch (Exception e){

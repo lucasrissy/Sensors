@@ -14,11 +14,11 @@ import java.time.LocalDate;
 @Table(name = "tb_temperature")
 @AllArgsConstructor
 @NoArgsConstructor
-public class TemperatureSensor {
+public class Temperature {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long UID;
 
     private Integer temperature;
 
@@ -27,7 +27,7 @@ public class TemperatureSensor {
     @Override
     public String toString() {
         return "TemperatureSensor{" +
-                "id=" + id +
+                "id=" + UID +
                 ", temperature=" + temperature +
                 ", timestamp=" + timestamp +
                 '}';
