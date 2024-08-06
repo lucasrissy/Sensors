@@ -51,3 +51,14 @@ management:
     health:
       probes:
         enabled: true  Habilitar probes de saúde (health checks)
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "accounts"
+    description: "Eazy Bank Accounts Application"
+    version: "1.0.0"
+build:
+  version: 1.0.0

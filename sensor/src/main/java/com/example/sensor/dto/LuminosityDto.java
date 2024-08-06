@@ -1,4 +1,4 @@
-package com.example.temperature.dto;
+package com.example.sensor.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
@@ -11,11 +11,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Schema(
-        name = "Temperature Sensor",
-        description = "Schema to hold Temperature Sensor information"
-)
-public class TemperatureSensorDto {
+public class LuminosityDto {
 
     @NotEmpty(message = "UID data cannot be a null or empty")
     @Schema(
@@ -23,11 +19,11 @@ public class TemperatureSensorDto {
     )
     private Long UID;
 
-    @NotEmpty(message = "Temperature data cannot be a null or empty")
+    @NotEmpty(message = "Luminosity data cannot be a null or empty")
     @Schema(
-            description = "The temperature reading from the sensor", example = "23"
+            description = "The luminosity reading from the sensor", example = "23"
     )
-    private Integer temperature;
+    private Integer luminosity;
 
     @NotEmpty(message = "Time stamp data cannot be a null or empty")
     @Schema(

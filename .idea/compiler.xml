@@ -10,6 +10,7 @@
         <module name="temperature" />
         <module name="eurekaserver" />
         <module name="luminosity" />
+        <module name="sensor" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eurekaserver" options="-parameters" />
       <module name="luminosity" options="-parameters" />
+      <module name="sensor" options="-parameters" />
       <module name="temperature" options="-parameters" />
     </option>
   </component>
