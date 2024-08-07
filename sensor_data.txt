@@ -1,0 +1,11 @@
+Luminosity, Temperature
+LuminosityDto(UID=1, luminosity=22, timestamp=2023-07-20),TemperatureDto(UID=1, temperature=22, timestamp=2023-07-20)
+LuminosityDto(UID=2, luminosity=23, timestamp=2023-07-21),TemperatureDto(UID=2, temperature=23, timestamp=2023-07-21)
+LuminosityDto(UID=3, luminosity=21, timestamp=2023-07-22),TemperatureDto(UID=3, temperature=21, timestamp=2023-07-22)
+LuminosityDto(UID=4, luminosity=24, timestamp=2023-07-23),TemperatureDto(UID=4, temperature=24, timestamp=2023-07-23)
+LuminosityDto(UID=5, luminosity=22, timestamp=2023-07-24),TemperatureDto(UID=5, temperature=22, timestamp=2023-07-24)
+LuminosityDto(UID=6, luminosity=25, timestamp=2023-07-25),TemperatureDto(UID=6, temperature=25, timestamp=2023-07-25)
+LuminosityDto(UID=7, luminosity=20, timestamp=2023-07-26),TemperatureDto(UID=7, temperature=20, timestamp=2023-07-26)
+LuminosityDto(UID=8, luminosity=26, timestamp=2023-07-27),TemperatureDto(UID=8, temperature=26, timestamp=2023-07-27)
+LuminosityDto(UID=9, luminosity=21, timestamp=2023-07-28),TemperatureDto(UID=9, temperature=21, timestamp=2023-07-28)
+LuminosityDto(UID=10, luminosity=23, timestamp=2023-07-29),TemperatureDto(UID=10, temperature=23, timestamp=2023-07-29)

@@ -7,8 +7,15 @@ import com.example.sensor.service.client.LuminosityFeignClient;
 import com.example.sensor.service.client.TemperatureFeignClient;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 public class SensorDetailsService {
@@ -40,5 +47,22 @@ public class SensorDetailsService {
 
         return sensorDetailsDto;
 
+    }
+
+    public Page<SensorDetailsDto> pageAllDataSensor(Pageable pageable) {
+
+        Page<LuminosityDto> luminosityDtoPage = luminosity.pageLuminosity().getBody();
+
+        Page<TemperatureDto> temperatureDtoPage = temperature.pageTemperature().getBody();
+
+        List<SensorDetailsDto> combinedList = new ArrayList<>();
+
+        int i;
+        for (i = 0;i <Math.max(luminosityDtoPage.getSize(), temperatureDtoPage.getSize()); i++){
+
+            combinedList.add(new SensorDetailsDto(luminosityDtoPage.getContent().get(i),temperatureDtoPage.getContent().get(i)));
+        }
+
+        return new PageImpl<>(combinedList);
     }
 }

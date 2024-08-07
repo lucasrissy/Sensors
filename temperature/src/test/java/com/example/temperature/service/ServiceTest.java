@@ -47,7 +47,7 @@ public class ServiceTest {
         id = 1L;
 
         entity = new Temperature();
-        entity.setUID(1L);
+        entity.setId(1L);
         entity.setTimestamp(LocalDate.now());
         entity.setTemperature(30);
 

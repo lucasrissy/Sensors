@@ -72,7 +72,7 @@ public class TemperatureSensorController {
     @GetMapping("/getAll")
     public ResponseEntity<Page<TemperatureSensorDto>> pageAllSensors(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "5") int size,
+            @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "id, asc") String[] sort){
 
         Sort.Direction direction = Sort.Direction.fromString(sort[1]);

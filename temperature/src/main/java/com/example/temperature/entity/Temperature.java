@@ -18,7 +18,7 @@ public class Temperature {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long UID;
+    private Long id;
 
     private Integer temperature;
 
@@ -27,7 +27,7 @@ public class Temperature {
     @Override
     public String toString() {
         return "TemperatureSensor{" +
-                "id=" + UID +
+                "id=" + id +
                 ", temperature=" + temperature +
                 ", timestamp=" + timestamp +
                 '}';
