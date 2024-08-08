@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: gatewayapi
+  cloud:
+    config:
+      enabled: false
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+    loadbalancer:
+      configurations: health-check
+      routes:
+        - id: sensor
+          uri: lb://sensor
+          predicates:
+            - Path=/sensor/**
+        - id: luminosity
+          uri: lb://luminosity
+          predicates:
+            - Path=/luminosity/**
+        - id: temperature
+          uri: lb://temperature
+          predicates:
+            - Path=/temperature/**
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+info:
+  app:
+    name: "gatewayserver"
+    description: "Eazy Bank Accounts Application"
+    version: "1.0.0"
+
+server:
+  port: 8083

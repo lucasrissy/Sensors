@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/temperature/pom.xml" />
         <option value="$PROJECT_DIR$/eurekaserver/pom.xml" />
         <option value="$PROJECT_DIR$/sensor/pom.xml" />
+        <option value="$PROJECT_DIR$/gatewayapi/pom.xml" />
       </list>
     </option>
   </component>

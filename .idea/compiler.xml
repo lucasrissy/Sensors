@@ -11,12 +11,14 @@
         <module name="eurekaserver" />
         <module name="luminosity" />
         <module name="sensor" />
+        <module name="gatewayapi" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eurekaserver" options="-parameters" />
+      <module name="gatewayapi" options="-parameters" />
       <module name="luminosity" options="-parameters" />
       <module name="sensor" options="-parameters" />
       <module name="temperature" options="-parameters" />
