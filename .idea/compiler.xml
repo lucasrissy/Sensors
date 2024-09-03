@@ -11,6 +11,7 @@
         <module name="eurekaserver" />
         <module name="luminosity" />
         <module name="sensor" />
+        <module name="message" />
         <module name="gatewayapi" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="eurekaserver" options="-parameters" />
       <module name="gatewayapi" options="-parameters" />
       <module name="luminosity" options="-parameters" />
+      <module name="message" options="-parameters" />
       <module name="sensor" options="-parameters" />
       <module name="temperature" options="-parameters" />
     </option>

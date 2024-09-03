@@ -1,6 +1,11 @@
 spring:
   application:
     name: gatewayapi
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/myrealm # Replace with your Keycloak realm URI
   cloud:
     config:
       enabled: false
